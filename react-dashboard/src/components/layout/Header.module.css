@@ -1,0 +1,137 @@
+.header {
+  background: #222;
+  color: #fff;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  margin: 0;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__btn {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.header__btn:focus {
+  outline: 2px solid #646cff;
+}
+
+.header__bell {
+  position: relative;
+}
+
+.header__bell-btn {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.header__badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #f44336;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: var(--card-bg);
+  color: var(--text);
+  min-width: 320px;
+  box-shadow: 0 2px 8px #0002;
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 12px;
+}
+
+.header__dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.header__dropdown-clear {
+  font-size: 12px;
+  color: #f44336;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__dropdown-list {
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.header__dropdown-empty {
+  text-align: center;
+  color: #888;
+  padding: 16px;
+}
+
+.header__dropdown-item {
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+}
+.header__dropdown-item--unread {
+  background: rgba(100,108,255,0.08);
+}
+
+.header__dropdown-icon {
+  font-size: 18px;
+}
+
+.header__dropdown-message {
+  flex: 1;
+}
+
+.header__dropdown-mark {
+  font-size: 12px;
+  color: #646cff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__user {
+  background: #444;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+} 

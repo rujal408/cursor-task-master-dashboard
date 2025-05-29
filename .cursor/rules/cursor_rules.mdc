@@ -1,0 +1,107 @@
+---
+description: Guidelines for creating and maintaining Cursor rules to ensure consistency and effectiveness.
+globs: .cursor/rules/*.mdc
+alwaysApply: true
+---
+
+- **Required Rule Structure:**
+  ```markdown
+  ---
+  description: Clear, one-line description of what the rule enforces
+  globs: path/to/files/*.ext, other/path/**/*
+  alwaysApply: boolean
+  ---
+
+  - **Main Points in Bold**
+    - Sub-points with details
+    - Examples and explanations
+  ```
+
+- **File References:**
+  - Use `[filename](mdc:path/to/file)` ([filename](mdc:filename)) to reference files
+  - Example: [prisma.mdc](mdc:.cursor/rules/prisma.mdc) for rule references
+  - Example: [schema.prisma](mdc:prisma/schema.prisma) for code references
+
+- **Code Examples:**
+  - Use language-specific code blocks
+  ```typescript
+  // ✅ DO: Show good examples
+  const goodExample = true;
+  
+  // ❌ DON'T: Show anti-patterns
+  const badExample = false;
+  ```
+
+- **Rule Content Guidelines:**
+  - Start with high-level overview
+  - Include specific, actionable requirements
+  - Show examples of correct implementation
+  - Reference existing code when possible
+  - Keep rules DRY by referencing other rules
+
+- **Rule Maintenance:**
+  - Update rules when new patterns emerge
+  - Add examples from actual codebase
+  - Remove outdated patterns
+  - Cross-reference related rules
+
+- **Best Practices:**
+  - Use bullet points for clarity
+  - Keep descriptions concise
+  - Include both DO and DON'T examples
+  - Reference actual code over theoretical examples
+  - Use consistent formatting across rules
+
+---
+description: Enforce package management practices and directory structure restrictions for the project.
+globs: react-dashboard/**
+alwaysApply: true
+---
+
+- **Key Points to Emphasize**:
+  1. **Early Package Identification**: The Code Editor should proactively identify and suggest all packages required based on the initial project specifications.
+  2. **Complete Analysis**: Review the full scope of tasks to ensure all dependencies are considered, avoiding the need for future package installations.
+  3. **Preemptive Recommendations**: All package or dependency recommendations must be provided upfront to allow the development process to proceed smoothly without interruptions.
+
+- **Package Management Restrictions**
+  - Code Editor must **not** update existing packages automatically.
+  - Any package additions or updates should be suggested as **comments** or **recommendations**, not executed actions.
+
+- **Database Setup Restrictions**
+  - Code Editor must **not** handle database setup, including schema design, migrations, or configuration.
+  - Any database-related actions should be suggested as **comments** or **recommendations**, not executed actions.
+
+- **Directory Scope Limitations**
+  - Code Editor must operate **only within the reactjs project directory**.
+  - All file operations must be confined to the project's root and its subdirectories.
+  - Code Editor must not read or write to files outside of this directory.
+
+- **Task Completion Verification Workflow**
+  - After any code change is accepted, **immediately review the task list** to assess the status of the associated task.
+  - If the task is **completed**, move to the next pending task.
+  - If the task is **incomplete**, continue working on it until all criteria are met.
+  - Ensure the task list is updated to reflect accurate status and prevent redundant work.
+
+- **Terminal Command Execution Policy**
+  - Code Editor must **not** execute any terminal commands automatically.
+  - When terminal commands are required, **suggest** them in comments but do **not execute** them.
+  - The responsibility to execute terminal commands lies **solely with the developer**.
+
+- **YARN Package Management Policy**
+  - Use **YARN** as the package manager for managing dependencies.
+  - Any package management tasks should be suggested using **YARN commands**.
+  - The responsibility to execute YARN commands lies **solely with the developer**.
+  - After each task completion, recommend running `yarn build` to ensure the application builds correctly.
+
+- **Post-Task Completion Verification**
+  - After completing a task, verify that all acceptance criteria are met.
+  - If the task is marked as **completed**, proceed to the next pending task.
+  - If the task is not completed, continue working on it until it meets the completion criteria.
+  - Keep the task list updated with accurate status and mark completed tasks to avoid redundant work.
+
+- **Functionality Testing After Task Completion**
+  - Once a task is completed, **test the functionality** to ensure that the expected behavior is verified.
+  - The developer should manually run tests or trigger relevant checks to validate that the task did not break any existing features and that the new changes function as expected.
+  - If any functionality issues arise during testing, the developer should resolve them before proceeding with the next task.
+
+

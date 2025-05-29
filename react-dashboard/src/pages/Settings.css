@@ -1,0 +1,114 @@
+/* Settings Page Styles */
+
+.settings-page {
+  max-width: 900px;
+  margin: 40px auto;
+  background: var(--card-bg);
+  padding: 0;
+  border-radius: 12px;
+  display: flex;
+  min-height: 500px;
+}
+
+.settings-sidebar {
+  width: 200px;
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding: 0;
+}
+
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.settings-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: background 0.2s;
+  outline: none;
+}
+.settings-nav-btn.active {
+  background: var(--primary);
+  color: var(--bg);
+  border-left: 4px solid #646cff;
+}
+
+.settings-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.settings-section {
+  margin-bottom: 32px;
+}
+
+.settings-form {
+  max-width: 400px;
+  margin-top: 24px;
+}
+
+.settings-label {
+  font-weight: 500;
+}
+
+.settings-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  box-sizing: border-box;
+}
+
+.settings-btn {
+  background: #646cff;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.settings-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.settings-btn.secondary {
+  background: #222;
+  margin-top: 40px;
+}
+
+.settings-error {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.settings-demo-btns {
+  display: flex;
+  gap: 12px;
+}
+
+.settings-demo-btns .settings-btn.info { background: #2196f3; }
+.settings-demo-btns .settings-btn.success { background: #4caf50; }
+.settings-demo-btns .settings-btn.warning { background: #ff9800; }
+.settings-demo-btns .settings-btn.error { background: #f44336; }
+
+.settings-muted {
+  color: #888;
+} 
